@@ -12,6 +12,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
+package Hw2_45;
 
 /**
  * Cricket is a specific type of Insect so Cricket inherits from Insect. Insect

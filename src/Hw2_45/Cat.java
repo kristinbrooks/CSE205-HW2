@@ -12,6 +12,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
+package Hw2_45;
 
 /**
  * Cat is a specific type of Mammal so Cat inherits from Mammal. Mammal and Cat

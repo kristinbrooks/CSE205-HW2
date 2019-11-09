@@ -15,7 +15,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
-
+package Hw2_45;
 /**
  * The abstract superclass for all types of Mammal. Note that Mammal does not
  * implement MakesSound.makeSound() because it does not have to since Mammal

@@ -10,8 +10,16 @@
 // Fulton Schools of Engineering
 // Arizona State University
 // Tempe, AZ 85287-8809
+//
+// EDITED
+// Original code was edited to add Frogs and Bees to the MakesSound ArrayList.
+//
+// EDITED BY
+// Kristin Brooks, krbrook7, krbrook7@asu.edu
 //******************************************************************************
-import java.util.ArrayList; 
+package Hw2_45;
+
+import java.util.ArrayList;
 
 /**
  * The main class for the program.
@@ -35,11 +43,16 @@ public class Main {
      */
 	public void run() { 
 		ArrayList<MakesSound> critters = new ArrayList<>(); 
-		critters.add(new Dog()); 
-		critters.add(new Cat()); 
+		critters.add(new Dog());
+		critters.add(new Frog());
+		critters.add(new Cat());
+		critters.add(new Bee());
 		critters.add(new Cricket()); 
-		critters.add(new Cat()); 
-		critters.add(new Cricket()); 
+		critters.add(new Cat());
+		critters.add(new Bee());
+		critters.add(new Cricket());
+		critters.add(new Frog());
+		critters.add(new Bee());
 		beNoisy(critters); 
 	} 
 

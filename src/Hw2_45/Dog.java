@@ -12,6 +12,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
+package Hw2_45;
 
 /**
  * Dog is a specific type of Mammal so Dog inherits from Mammal. Mammal and Dog

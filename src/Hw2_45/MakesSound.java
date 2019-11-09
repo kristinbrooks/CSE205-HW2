@@ -14,6 +14,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
+package Hw2_45;
 
 /**
  * Represents a sound made by some object.

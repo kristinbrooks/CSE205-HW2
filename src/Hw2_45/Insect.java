@@ -15,6 +15,7 @@
 // Arizona State University
 // Tempe, AZ 85287-8809
 //******************************************************************************
+package Hw2_45;
 
 /**
  * The abstract superclass for all types of Insects. Note that Insect does not

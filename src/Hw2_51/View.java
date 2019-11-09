@@ -4,6 +4,8 @@
 // DESCRIPTION
 // Implements the GUI for a calculator.
 //**************************************************************************************************
+package Hw2_51;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
