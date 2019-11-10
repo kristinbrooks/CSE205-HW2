@@ -1,14 +1,18 @@
 //**************************************************************************************************
-// CLASS: View
+// CLASS: View (View.java)
 //
 // DESCRIPTION
 // Implements the GUI for a calculator.
+//
+// EDITED
+// The code written below the comments was added.
+//
+// EDITED BY
+// Kristin Brooks, krbrook7, krbrook7@asu.edu
 //**************************************************************************************************
 package Hw2_51;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Box;
@@ -31,47 +35,93 @@ public class View extends JFrame implements ActionListener {
     private JTextField mText;
 
     /**
-     * Default ctor. Does nothing.
+     * Constructor. Sets up the layout and buttons of the calculator.
      */
     public View() {
         // Declare and create a JPanel named panelFunctButton. Set the layout manager to GridLayout
         // with 2 rows and 2 columns. Call addButton() to add buttons labeled "x^y", "log 10",
         // "log e", and "sqrt".
-        ???
+        JPanel panelFunctButton = new JPanel();
+        panelFunctButton.setLayout(new GridLayout(2,2));
+        addButton(panelFunctButton,"x^y");
+        addButton(panelFunctButton, "log 10");
+        addButton(panelFunctButton, "log e");
+        addButton(panelFunctButton, "sqrt");
 
         // Declare and create a JPanel named panelSysButton. Use the default FlowLayout layout
         // manager. Call addButton() to add buttons labeled "Clear", "About", and "Exit".
-        ???
+        JPanel panelSysButton = new JPanel();
+        panelSysButton.setLayout(new FlowLayout());
+        addButton(panelSysButton, "Clear");
+        addButton(panelSysButton, "About");
+        addButton(panelSysButton, "Exit");
 
         // Declare and create a JPanel named panelFunctSys. Use the BorderLayout layout manager.
         // Add panelFunctButton to the CENTER region. Add panelSysButton to the SOUTH region.
-        ???
+        JPanel panelFunctSys = new JPanel();
+        panelFunctSys.setLayout(new BorderLayout());
+        panelFunctSys.add(panelFunctButton, BorderLayout.CENTER);
+        panelFunctSys.add(panelSysButton, BorderLayout.SOUTH);
 
         // Declare and create a JPanel named panelKeypad. Use the GridLayout layout manager with
         // 4 rows and 4 columns. Call addButton() to add the buttons labeled "7", "8", "9", and so
         // on.
-        ???
+        JPanel panelKeypad = new JPanel();
+        panelKeypad.setLayout(new GridLayout(4, 4));
+        addButton(panelKeypad, "7");
+        addButton(panelKeypad, "8");
+        addButton(panelKeypad, "9");
+        addButton(panelKeypad, "/");
+        addButton(panelKeypad, "4");
+        addButton(panelKeypad, "5");
+        addButton(panelKeypad, "6");
+        addButton(panelKeypad, "*");
+        addButton(panelKeypad, "1");
+        addButton(panelKeypad, "2");
+        addButton(panelKeypad, "3");
+        addButton(panelKeypad, "-");
+        addButton(panelKeypad, "0");
+        addButton(panelKeypad, ".");
+        addButton(panelKeypad, "+/-");
+        addButton(panelKeypad, "+");
 
         // Declare and create a new JPanel named panelBottom. Use the horizontal BoxLayout layout
         // manager. Add panelKeypad. Add a 10-pixel wide rigid area (using Box.createRigidArea()).
         // Add panelFunctSys.
-        ???
+        JPanel panelBottom = new JPanel();
+        panelBottom.setLayout(new BoxLayout(panelBottom, BoxLayout.X_AXIS));
+        panelBottom.add(panelKeypad);
+        panelBottom.add(Box.createRigidArea(new Dimension(10,0)));
+        panelBottom.add(panelFunctSys);
 
         // Declare and create a JPanel named panelTextField. Use the default FlowLayout layout
         // manager. Create the mText JTextField making it 30 columns wide. Add mText to the
         // panelTextField panel.
-        ???
+        JPanel panelTextField = new JPanel();
+        panelTextField.setLayout(new FlowLayout());
+        mText = new JTextField(30);
+        panelTextField.add(mText);
 
         // Declare and create a JPanel named panelLabel. Use the default FlowLayout layout manager.
         // Declare and create a JLabel named label displaying "Kalkutron-9000" or whatever you
         // want to display. Add label to panelLabel.
-        ???
+        JPanel panelLabel = new JPanel();
+        panelLabel.setLayout(new FlowLayout());
+        JLabel label = new JLabel("Kalkutron-9000");
+        panelLabel.add(label);
 
         // Declare and create a JPanel named panelMain. Use the vertical BoxLayout layout manager.
         // Add some vertical glue to panelMain (using Box.createVerticalGlue()). Add panelLabel.
         // Add some more vertical glue. Add panelTextField. Add panelBottom. Add some more vertical
         // glue.
-        ???
+        JPanel panelMain = new JPanel();
+        panelMain.setLayout(new BoxLayout(panelMain, BoxLayout.Y_AXIS));
+        panelMain.add(Box.createVerticalGlue());
+        panelMain.add(panelLabel);
+        panelMain.add(Box.createVerticalGlue());
+        panelMain.add(panelTextField);
+        panelMain.add(panelBottom);
+        panelMain.add(Box.createVerticalGlue());
 
         // Set the title bar string of this JFrame.
         setTitle("Kalkutron-9000");
@@ -111,11 +161,15 @@ public class View extends JFrame implements ActionListener {
 
         // Write code that determines if the Exit button is the source of the event and if so,
         // exit the application by calling System.exit().
-        ???
+        if (pEvent.getActionCommand().equals("Exit")) {
+            System.exit(0);
+        }
 
         // Write code that determines if the About button is the source of the event and if so,
         // display the about dialog using JOptionPane.showMessageDialog().
-        ???
+        if (pEvent.getActionCommand().equals("About")) {
+            JOptionPane.showMessageDialog(null, "Kalkutron-9000 Ver. 1\nKristin Brooks");
+        }
     }
 
 }
