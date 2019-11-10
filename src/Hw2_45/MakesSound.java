@@ -20,5 +20,5 @@ package Hw2_45;
  * Represents a sound made by some object.
  */
 public interface MakesSound { 
-	public void makeSound(); 
+	void makeSound();
 } 

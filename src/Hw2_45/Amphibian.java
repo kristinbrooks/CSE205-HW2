@@ -12,5 +12,5 @@ package Hw2_45;
 /**
  *
  */
-public abstract class Amphibian implements MakesSound {
+abstract class Amphibian implements MakesSound {
 }

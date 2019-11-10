@@ -41,7 +41,7 @@ public class Main {
      * and Cricket objects. After creating the list, we add various animals to
      * it. Then we call beNoisy() passing the ArrayList as the argument.
      */
-	public void run() { 
+	private void run() {
 		ArrayList<MakesSound> critters = new ArrayList<>(); 
 		critters.add(new Dog());
 		critters.add(new Frog());
@@ -69,7 +69,7 @@ public class Main {
      * will print "Meow". And when critter is a Cricket, we will call Cricket.
      * makeSound() which will print "Chirp". 
      */
-	public void beNoisy(ArrayList<MakesSound> pCritters) { 
+	private void beNoisy(ArrayList<MakesSound> pCritters) {
 		for (MakesSound critter : pCritters) { 
 			critter.makeSound(); // This is a polymorphic method call.
 		} 

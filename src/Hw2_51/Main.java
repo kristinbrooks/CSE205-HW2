@@ -11,9 +11,9 @@ public class Main {
         new Main().run();
     }
 
-    public void run() {
+    private void run() {
         JFrame.setDefaultLookAndFeelDecorated(true);
-        View view = new View();
+        new View();
     }
 
 }

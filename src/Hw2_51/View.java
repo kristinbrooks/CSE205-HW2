@@ -29,15 +29,13 @@ import javax.swing.JTextField;
  */
 public class View extends JFrame implements ActionListener {
 
-    public static final int FRAME_WIDTH  = 500;
-    public static final int FRAME_HEIGHT = 200;
-
-    private JTextField mText;
+    private static final int FRAME_WIDTH  = 500;
+    private static final int FRAME_HEIGHT = 200;
 
     /**
      * Constructor. Sets up the layout and buttons of the calculator.
      */
-    public View() {
+    View() {
         // Declare and create a JPanel named panelFunctButton. Set the layout manager to GridLayout
         // with 2 rows and 2 columns. Call addButton() to add buttons labeled "x^y", "log 10",
         // "log e", and "sqrt".
@@ -99,7 +97,7 @@ public class View extends JFrame implements ActionListener {
         // panelTextField panel.
         JPanel panelTextField = new JPanel();
         panelTextField.setLayout(new FlowLayout());
-        mText = new JTextField(30);
+        JTextField mText = new JTextField(30);
         panelTextField.add(mText);
 
         // Declare and create a JPanel named panelLabel. Use the default FlowLayout layout manager.

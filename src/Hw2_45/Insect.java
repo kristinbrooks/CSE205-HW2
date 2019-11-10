@@ -22,5 +22,5 @@ package Hw2_45;
  * implement MakesSound.makeSound() because it does not have to since Insect
  * is abstract.
  */
-public abstract class Insect implements MakesSound { 
+abstract class Insect implements MakesSound {
 } 
